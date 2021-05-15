@@ -15,8 +15,11 @@ public class directores extends Empleados{
     private int años_puesto;
     private ArrayList<String> des_asignados;
 
-    public directores(int años_puesto, ArrayList<String> des_asignados, String nombre, String apellido, String ID, String nacionalidad, int años_contrato, int sueldo_mensual, int poyectos_realizados) {
-        super(nombre, apellido, ID, nacionalidad, años_contrato, sueldo_mensual, poyectos_realizados);
+    public directores() {
+    }
+
+    public directores(int años_puesto, ArrayList<String> des_asignados, String nombre, String apellido, String ID, String nacionalidad, String user, String contra, int años_contrato, int sueldo_mensual, int poyectos_realizados) {
+        super(nombre, apellido, ID, nacionalidad, user, contra, años_contrato, sueldo_mensual, poyectos_realizados);
         this.años_puesto = años_puesto;
         this.des_asignados = des_asignados;
     }
@@ -69,6 +72,22 @@ public class directores extends Empleados{
         this.nacionalidad = nacionalidad;
     }
 
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getContra() {
+        return contra;
+    }
+
+    public void setContra(String contra) {
+        this.contra = contra;
+    }
+
     public int getAños_contrato() {
         return años_contrato;
     }
@@ -92,10 +111,10 @@ public class directores extends Empleados{
     public void setPoyectos_realizados(int poyectos_realizados) {
         this.poyectos_realizados = poyectos_realizados;
     }
-
     @Override
     public String toString() {
-        return "directores{" + "a\u00f1os_puesto=" + años_puesto + ", des_asignados=" + des_asignados + super.toString()+'}';
+        return "" +  años_puesto + " " +des_asignados + " " +super.toString();
     }
-    
+
+   
 }

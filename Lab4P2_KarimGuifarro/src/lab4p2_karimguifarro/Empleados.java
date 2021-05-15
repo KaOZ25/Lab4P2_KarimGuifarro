@@ -6,17 +6,19 @@
 package lab4p2_karimguifarro;
 
 public class Empleados {
-    String nombre,apellido,ID,nacionalidad;
+    String nombre,apellido,ID,nacionalidad,user,contra;
     int años_contrato,sueldo_mensual,poyectos_realizados;
 
     public Empleados() {
     }
 
-    public Empleados(String nombre, String apellido, String ID, String nacionalidad, int años_contrato, int sueldo_mensual, int poyectos_realizados) {
+    public Empleados(String nombre, String apellido, String ID, String nacionalidad, String user, String contra, int años_contrato, int sueldo_mensual, int poyectos_realizados) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.ID = ID;
         this.nacionalidad = nacionalidad;
+        this.user = user;
+        this.contra = contra;
         this.años_contrato = años_contrato;
         this.sueldo_mensual = sueldo_mensual;
         this.poyectos_realizados = poyectos_realizados;
@@ -54,6 +56,22 @@ public class Empleados {
         this.nacionalidad = nacionalidad;
     }
 
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getContra() {
+        return contra;
+    }
+
+    public void setContra(String contra) {
+        this.contra = contra;
+    }
+
     public int getAños_contrato() {
         return años_contrato;
     }
@@ -80,7 +98,8 @@ public class Empleados {
 
     @Override
     public String toString() {
-        return "Empleados{" + "nombre=" + nombre + ", apellido=" + apellido + ", ID=" + ID + ", nacionalidad=" + nacionalidad + ", a\u00f1os_contrato=" + años_contrato + ", sueldo_mensual=" + sueldo_mensual + ", poyectos_realizados=" + poyectos_realizados + '}';
+        return  nombre + " " +apellido + " " + ID + " "+ nacionalidad + " "+ user + " " +contra + " " +años_contrato + " " +sueldo_mensual + " " +poyectos_realizados ;
     }
+
     
 }

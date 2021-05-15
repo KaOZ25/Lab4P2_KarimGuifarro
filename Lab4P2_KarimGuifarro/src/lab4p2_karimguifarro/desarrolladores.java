@@ -16,8 +16,8 @@ public class desarrolladores extends Empleados {
     public desarrolladores() {
     }
 
-    public desarrolladores(int años_exp, int horas_trabajo, String lenguaje_fav, String nombre, String apellido, String ID, String nacionalidad, int años_contrato, int sueldo_mensual, int poyectos_realizados) {
-        super(nombre, apellido, ID, nacionalidad, años_contrato, sueldo_mensual, poyectos_realizados);
+    public desarrolladores(int años_exp, int horas_trabajo, String lenguaje_fav, String nombre, String apellido, String ID, String nacionalidad, String user, String contra, int años_contrato, int sueldo_mensual, int poyectos_realizados) {
+        super(nombre, apellido, ID, nacionalidad, user, contra, años_contrato, sueldo_mensual, poyectos_realizados);
         this.años_exp = años_exp;
         this.horas_trabajo = horas_trabajo;
         this.lenguaje_fav = lenguaje_fav;
@@ -79,6 +79,22 @@ public class desarrolladores extends Empleados {
         this.nacionalidad = nacionalidad;
     }
 
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getContra() {
+        return contra;
+    }
+
+    public void setContra(String contra) {
+        this.contra = contra;
+    }
+
     public int getAños_contrato() {
         return años_contrato;
     }
@@ -103,9 +119,12 @@ public class desarrolladores extends Empleados {
         this.poyectos_realizados = poyectos_realizados;
     }
 
+  
+
+  
     @Override
     public String toString() {
-        return "desarrolladores{" + "a\u00f1os_exp=" + años_exp + ", horas_trabajo=" + horas_trabajo + ", lenguaje_fav=" + lenguaje_fav + super.toString() +'}';
+        return  años_exp + " " +horas_trabajo + " " +lenguaje_fav + super.toString();
     }
-   
+    
 }

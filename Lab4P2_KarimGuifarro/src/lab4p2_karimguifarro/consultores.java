@@ -13,8 +13,11 @@ public class consultores extends Empleados{
    private int tiempo_consulta;
    private String campo_exp;
 
-    public consultores(int tiempo_consulta, String campo_exp, String nombre, String apellido, String ID, String nacionalidad, int años_contrato, int sueldo_mensual, int poyectos_realizados) {
-        super(nombre, apellido, ID, nacionalidad, años_contrato, sueldo_mensual, poyectos_realizados);
+    public consultores() {
+    }
+
+    public consultores(int tiempo_consulta, String campo_exp, String nombre, String apellido, String ID, String nacionalidad, String user, String contra, int años_contrato, int sueldo_mensual, int poyectos_realizados) {
+        super(nombre, apellido, ID, nacionalidad, user, contra, años_contrato, sueldo_mensual, poyectos_realizados);
         this.tiempo_consulta = tiempo_consulta;
         this.campo_exp = campo_exp;
     }
@@ -67,6 +70,22 @@ public class consultores extends Empleados{
         this.nacionalidad = nacionalidad;
     }
 
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getContra() {
+        return contra;
+    }
+
+    public void setContra(String contra) {
+        this.contra = contra;
+    }
+
     public int getAños_contrato() {
         return años_contrato;
     }
@@ -91,9 +110,12 @@ public class consultores extends Empleados{
         this.poyectos_realizados = poyectos_realizados;
     }
 
+ 
     @Override
     public String toString() {
-        return "consultores{" + "tiempo_consulta=" + tiempo_consulta + ", campo_exp=" + campo_exp + super.toString()+'}';
+        return  tiempo_consulta + " "+ campo_exp + " " +super.toString();
     }
+
    
+  
 }
